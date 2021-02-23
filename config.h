@@ -22,7 +22,14 @@ static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#005577";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 #include "/home/lp/.cache/wal/colors-wal-dwm.h"
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { 0xd0, baralpha, 0x80 },
+	[SchemeSel]  = { 0xd0, baralpha, borderalpha },
+};
 
 typedef struct {
 	const char *name;
