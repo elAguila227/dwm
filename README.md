@@ -1,4 +1,4 @@
-# My personal dem fork from Luke's build of dwm
+# My personal dwm fork from Luke's build of dwm
 
 ## Please install `libxft-bgra`!
 
