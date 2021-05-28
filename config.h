@@ -24,7 +24,7 @@ static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#005577";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-#include "../.cache/wal/colors-wal-dwm.h"
+#include "../../.cache/wal/colors-wal-dwm.h"
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { 0xd0, baralpha, borderalpha },
@@ -212,7 +212,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
-	/* { MODKEY,			XK_c,		spawn,		SHCMD("") }, */
+	{ MODKEY,			XK_c,		spawn,		SHCMD(TERMINAL " -e bc -l") },
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
@@ -272,7 +272,7 @@ static Key keys[] = {
 	/* { 0, XF86XK_AudioMedia,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") }, */
 	/* { 0, XF86XK_AudioMicMute,	spawn,		SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") }, */
 	/* { 0, XF86XK_PowerOff,		spawn,		SHCMD("sysact") }, */
-	/* { 0, XF86XK_Calculator,		spawn,		SHCMD(TERMINAL " -e bc -l") }, */
+	{ 0, XF86XK_Calculator,		spawn,		SHCMD(TERMINAL " -e bc -l") },
 	/* { 0, XF86XK_Sleep,		spawn,		SHCMD("sudo -A zzz") }, */
 	/* { 0, XF86XK_WWW,		spawn,		SHCMD("$BROWSER") }, */
 	/* { 0, XF86XK_DOS,		spawn,		SHCMD(TERMINAL) }, */
